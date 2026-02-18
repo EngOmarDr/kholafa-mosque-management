@@ -1,0 +1,37 @@
+project_id = "wibxqnhddfsgepvlijer"
+
+[functions.student-inquiry]
+verify_jwt = false
+
+[functions.teacher-applications]
+verify_jwt = false
+
+[functions.bulk-create-teachers]
+verify_jwt = false
+
+[functions.create-admin]
+verify_jwt = false
+
+[functions.add-student]
+verify_jwt = false
+
+[functions.update-user-password]
+verify_jwt = false
+
+[functions.create-backup]
+verify_jwt = false
+
+[functions.import-backup]
+verify_jwt = false
+
+[functions.reset-year]
+verify_jwt = false
+
+[functions.auto-backup]
+verify_jwt = false
+
+[functions.check-consecutive-absences]
+verify_jwt = false
+
+[functions.send-push-notification]
+verify_jwt = false

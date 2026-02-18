@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لا يوجد اتصال - الخلفاء الراشدين</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Cairo", sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 500px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px 30px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .logo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 30px;
+        background: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .logo img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+      }
+
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 30px;
+      }
+
+      .icon {
+        font-size: 80px;
+        margin-bottom: 20px;
+        opacity: 0.8;
+      }
+
+      button {
+        background: white;
+        color: #1e3a8a;
+        border: none;
+        padding: 15px 40px;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+      }
+
+      button:active {
+        transform: translateY(0);
+      }
+
+      .status {
+        margin-top: 20px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="/logo.png" alt="جيل صلاحي" />
+      </div>
+      <div class="icon">📡</div>
+      <h1>لا يوجد اتصال بالإنترنت</h1>
+      <p>
+        يبدو أنك غير متصل بالإنترنت. يرجى التحقق من اتصالك والمحاولة مرة أخرى.
+      </p>
+      <button onclick="retry()">إعادة المحاولة</button>
+      <div class="status" id="status"></div>
+    </div>
+
+    <script>
+      // فحص فوري عند تحميل الصفحة
+      window.addEventListener("load", () => {
+        if (navigator.onLine) {
+          fetch("/", { method: "HEAD", cache: "no-store" })
+            .then(() => {
+              // الاتصال موجود! إعادة التوجيه فوراً
+              window.location.replace("/");
+            })
+            .catch(() => {
+              // لا يوجد اتصال حقيقي، نبقى على الصفحة
+            });
+        }
+      });
+
+      function retry() {
+        const statusEl = document.getElementById("status");
+        statusEl.textContent = "جاري التحقق من الاتصال...";
+
+        fetch("/", { method: "HEAD", cache: "no-store" })
+          .then(() => {
+            statusEl.textContent = "تم استعادة الاتصال! جاري إعادة التحميل...";
+            setTimeout(() => {
+              window.location.replace("/");
+            }, 1000);
+          })
+          .catch(() => {
+            statusEl.textContent = "لا يزال الاتصال غير متاع";
+            setTimeout(() => {
+              statusEl.textContent = "";
+            }, 3000);
+          });
+      }
+
+      // Check connection status periodically
+      setInterval(() => {
+        if (navigator.onLine) {
+          fetch("/", { method: "HEAD", cache: "no-store" })
+            .then(() => {
+              window.location.replace("/");
+            })
+            .catch(() => {});
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>
