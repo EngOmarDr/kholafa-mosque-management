@@ -14,7 +14,7 @@ const Index = () => {
       try {
         // Check if there's a valid Supabase session
         const { data: { session } } = await supabase.auth.getSession();
-        
+
         if (!isMounted) return;
 
         if (session?.user) {
@@ -71,7 +71,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-accent to-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 islamic-pattern opacity-20"></div>
-      
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col items-center justify-center">
         {/* Logo & Title */}
@@ -79,15 +79,15 @@ const Index = () => {
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-white mb-6 shadow-emerald glow-emerald overflow-hidden">
             <img src="/logo.png" alt="جيل صلاحي" className="w-full h-full object-cover" />
           </div>
-          
+
           <h1 className="text-6xl md:text-7xl font-bold text-primary mb-4 animate-slide-up">
-            جيل صلاحي
+            الخلفاء الراشدين
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
             نظام متكامل لإدارة حلقات القرآن الكريم
           </p>
-          
+
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground mb-8">
             <div className="flex items-center gap-2 badge-success">
               <Sparkles className="w-4 h-4" />
@@ -148,7 +148,7 @@ const Index = () => {
 
         {/* Footer */}
         <div className="mt-20 text-center text-sm text-muted-foreground">
-          <p>© 2025 جيل صلاحي - جميع الحقوق محفوظة</p>
+          <p>© 2026 الخلفاء الراشدين - جميع الحقوق محفوظة</p>
         </div>
       </div>
     </div>

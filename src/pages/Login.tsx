@@ -146,7 +146,7 @@ const Login = () => {
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white mb-4 shadow-emerald animate-float overflow-hidden">
             <img src="/logo.png" alt="جيل صلاحي" className="w-full h-full object-cover" />
           </div>
-          <h1 className="text-4xl font-bold text-primary mb-2">جيل صلاحي</h1>
+          <h1 className="text-4xl font-bold text-primary mb-2">الخلفاء الراشدين</h1>
           <p className="text-muted-foreground text-lg">نظام إدارة حلقات القرآن الكريم</p>
         </div>
 
@@ -228,7 +228,7 @@ const Login = () => {
 
         {/* Footer */}
         <div className="text-center mt-6 text-sm text-muted-foreground">
-          <p>© 2025 جيل صلاحي - جميع الحقوق محفوظة</p>
+          <p>© 2026 الخلفاء الراشدين - جميع الحقوق محفوظة</p>
         </div>
       </div>
 

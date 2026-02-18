@@ -70,13 +70,13 @@ const FirstSetup = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-accent to-background p-4">
       <div className="absolute inset-0 islamic-pattern opacity-30"></div>
-      
+
       <div className="w-full max-w-md relative z-10 animate-slide-up">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white mb-4 shadow-emerald overflow-hidden">
             <img src="/logo.png" alt="جيل صلاحي" className="w-full h-full object-cover" />
           </div>
-          <h1 className="text-4xl font-bold text-primary mb-2">جيل صلاحي</h1>
+          <h1 className="text-4xl font-bold text-primary mb-2">الخلفاء الراشدين</h1>
           <p className="text-muted-foreground text-lg">إنشاء حساب المدير الأول</p>
         </div>
 
@@ -187,7 +187,7 @@ const FirstSetup = () => {
         </div>
 
         <div className="text-center mt-6 text-sm text-muted-foreground">
-          <p>© 2025 جيل صلاحي - جميع الحقوق محفوظة</p>
+          <p>© 2026 الخلفاء الراشدين - جميع الحقوق محفوظة</p>
         </div>
       </div>
     </div>

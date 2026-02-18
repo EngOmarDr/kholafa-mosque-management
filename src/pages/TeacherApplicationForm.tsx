@@ -163,7 +163,7 @@ const TeacherApplicationForm = () => {
               نموذج التقديم للتدريس
             </h1>
             <p className="text-muted-foreground">
-             دورة جيل صلاحي
+              دورة الخلفاء الراشدين
             </p>
           </div>
 
@@ -173,7 +173,7 @@ const TeacherApplicationForm = () => {
               <h3 className="text-lg font-semibold text-primary border-b pb-2">
                 المعلومات الأساسية
               </h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="name" className="required">اسم الأستاذ *</Label>
@@ -266,13 +266,13 @@ const TeacherApplicationForm = () => {
               <h3 className="text-lg font-semibold text-primary border-b pb-2">
                 المؤهل العلمي الديني
               </h3>
-              
+
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <Checkbox
                     id="mosque"
                     checked={formData.المؤهل_العلمي_الديني.includes("درست في مسجد سابق")}
-                    onCheckedChange={(checked) => 
+                    onCheckedChange={(checked) =>
                       handleQualificationChange("درست في مسجد سابق", checked as boolean)
                     }
                   />
@@ -312,7 +312,7 @@ const TeacherApplicationForm = () => {
                   <Checkbox
                     id="shariaSchool"
                     checked={formData.المؤهل_العلمي_الديني.includes("درست في الثانوية الشرعية")}
-                    onCheckedChange={(checked) => 
+                    onCheckedChange={(checked) =>
                       handleQualificationChange("درست في الثانوية الشرعية", checked as boolean)
                     }
                   />

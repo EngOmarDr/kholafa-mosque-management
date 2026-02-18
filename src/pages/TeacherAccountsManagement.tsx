@@ -231,7 +231,7 @@ const TeacherAccountsManagement = () => {
     const phone = createdCredentials.phone.replace(/[^0-9]/g, '');
     const message = `السلام عليكم ورحمة الله وبركاته
 
-تم إنشاء حساب خاص بك في نظام جيل صلاحي
+تم إنشاء حساب خاص بك في نظام الخلفاء الراشدين
 
 📧 البريد الإلكتروني: ${createdCredentials.email}
 🔑 كلمة المرور: ${createdCredentials.password}
@@ -311,7 +311,7 @@ const TeacherAccountsManagement = () => {
   const handleSendExistingAccountWhatsApp = (teacher: TeacherWithAccount) => {
     const message = `السلام عليكم ورحمة الله وبركاته
 
-تذكير ببيانات حساب الأستاذ ${teacher["اسم الاستاذ"]} في نظام جيل صلاحي
+تذكير ببيانات حساب الأستاذ ${teacher["اسم الاستاذ"]} في نظام الخلفاء الراشدين
 
 📧 البريد الإلكتروني: ${teacher.profile?.email || 'غير محدد'}
 
@@ -339,7 +339,7 @@ const TeacherAccountsManagement = () => {
   if (loading) {
     return (
       <DashboardLayout
-        title="جيل صلاحي"
+        title="الخلفاء الراشدين"
         userName={user?.name}
         role={user?.role}
       >
@@ -357,7 +357,7 @@ const TeacherAccountsManagement = () => {
 
   return (
     <DashboardLayout
-      title="جيل صلاحي"
+      title="الخلفاء الراشدين"
       userName={user?.name}
       role={user?.role}
     >

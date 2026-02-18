@@ -154,7 +154,7 @@ const DashboardLayout = ({
               <img src="/logo.png" alt="جيل صلاحي" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col min-w-0">
-              <h1 className="text-xs md:text-xl font-bold text-primary truncate hidden sm:block">جيل صلاحي</h1>
+              <h1 className="text-xs md:text-xl font-bold text-primary truncate hidden sm:block">الخلفاء الراشدين</h1>
               <p className="text-[10px] md:text-xs text-muted-foreground truncate max-w-[120px] md:max-w-none">{title}</p>
             </div>
           </div>
