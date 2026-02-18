@@ -151,10 +151,10 @@ export default defineConfig(({ mode }) => ({
         skipWaiting: true,
         clientsClaim: true
       },
-      devOptions: {
-        enabled: true,
-        type: 'module'
-      }
+      // devOptions: {
+      //   enabled: true,
+      //   type: 'module'
+      // }
     })
   ].filter(Boolean),
   resolve: {
