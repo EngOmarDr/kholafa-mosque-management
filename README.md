@@ -1,73 +1,85 @@
-# Welcome to your Lovable project
+# نظام إدارة جامع الخلفاء (Kholafa Mosque Management)
 
-## Project info
+نظام متكامل لإدارة حلقات التحفيظ والأنشطة التعليمية في المسجد، مصمم لتسهيل العمل الإداري والتواصل بين المعلمين، الطلاب، وأولياء الأمور.
 
-**URL**: https://lovable.dev/projects/23e8170b-e056-448d-b3eb-776415ca667f
+## 🚀 رابط المشروع
 
-## How can I edit this code?
+**زيارة الموقع**: [https://kholafa-mosque-management.netlify.app/](https://kholafa-mosque-management.netlify.app/)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## ✨ المميزات الرئيسية
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/23e8170b-e056-448d-b3eb-776415ca667f) and start prompting.
+### 🛠️ لوحة تحكم المسؤول (Admin Dashboard)
 
-Changes made via Lovable will be committed automatically to this repo.
+- **إحصائيات شاملة**: عرض الرسوم البيانية والتحليلات لتقدم الطلاب وأداء المعلمين.
+- **إدارة المستخدمين**: التحكم الكامل في حسابات المعلمين والطلاب وتوزيع الأدوار.
+- **نظام التنبيهات**: إرسال وإدارة الإشعارات الهامة.
+- **إدارة النسخ الاحتياطي**: الحفاظ على سلامة البيانات من خلال أدوات النسخ والتحكم.
 
-**Use your preferred IDE**
+### 👨‍🏫 إدارة المعلمين (Teachers Management)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **متابعة الحلقات**: مراقبة الحضور والغياب والتقدم الدراسي في كل حلقة.
+- **طلبات التوظيف**: نظام لاستقبال ومعالجة طلبات الانضمام للفريق التعليمي.
+- **تقارير الأداء**: تقارير دورية عن نشاط المعلم وتفاعله.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🎓 إدارة الطلاب (Students Management)
 
-Follow these steps:
+- **ملفات شخصية شاملة**: تتبع سجل الحفظ، الحضور، والسلوك.
+- **نظام النقاط والمكافآت**: تحفيز الطلاب من خلال نظام نقاط متكامل.
+- **الاستعلام عن النتائج**: واجهات خاصة للطلاب وأولياء الأمور لمتابعة التقدم.
+- **الاستيراد والتصدير**: دعم كامل لملفات Excel (CSV) لإدخال وتعديل البيانات بالجملة.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 📱 تطبيق ويب تقدمي (PWA)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **دعم العمل بدون اتصال**: إمكانية الوصول لبعض الميزات الأساسية حتى في حال انقطاع الإنترنت.
+- **تثبيت التطبيق**: يمكن تثبيت النظام كـ "تطبيق" على أجهزة الهاتف والكمبيوتر.
+- **إشعارات دفع (Push Notifications)**: تنبيهات فورية للمستخدمين.
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🛠️ التقنيات المستخدمة
 
-**Edit a file directly in GitHub**
+- **الواجهة الأمامية**: [React](https://reactjs.org/) مع [TypeScript](https://www.typescriptlang.org/).
+- **أدوات البناء**: [Vite](https://vitejs.dev/).
+- **قاعدة البيانات والمصادقة**: [Supabase](https://supabase.com/).
+- **إدارة البيانات**: [TanStack Query](https://tanstack.com/query/latest) (React Query).
+- **التقارير والرسوم**: [Recharts](https://recharts.org/) و [jsPDF](https://rawgit.com/MrRio/jsPDF/master/docs/index.html).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 💻 التشغيل المحلي
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+اتبع الخطوات التالية لتشغيل المشروع في بيئتك المحلية:
 
-## What technologies are used for this project?
+1. **استنساخ المستودع**:
 
-This project is built with:
+   ```sh
+   git clone <REPO_URL>
+   cd kholafa-mosque-management
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2. **تثبيت الاعتمادات**:
 
-## How can I deploy this project?
+   ```sh
+   npm install
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/23e8170b-e056-448d-b3eb-776415ca667f) and click on Share -> Publish.
+3. **إعداد متغيرات البيئة**:
+   قم بإنشاء ملف `.env` وأضف بيانات Supabase الخاصة بك:
 
-## Can I connect a custom domain to my Lovable project?
+   ```env
+   VITE_SUPABASE_URL=your_url
+   VITE_SUPABASE_ANON_KEY=your_key
+   ```
 
-Yes, you can!
+4. **تشغيل خادم التطوير**:
+   ```sh
+   npm run dev
+   ```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📄 الترخيص
+
+هذا المشروع خاص بجامع الخلفاء الراشدين. جميع الحقوق محفوظة.
